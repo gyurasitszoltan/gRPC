@@ -1,0 +1,8 @@
+.DS_Store
+
+node_modules/
+
+python-client/.venv/
+python-client/generated/__pycache__/
+python-client/generated/*.pyc
+python-client/__pycache__/

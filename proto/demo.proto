@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package demo.v1;
+
+service DemoService {
+  rpc Ping(PingRequest) returns (PingReply);
+  rpc SubscribeTicks(TickRequest) returns (stream TickReply);
+  rpc ChatStream(stream ChatMessage) returns (stream ChatMessage);
+}
+
+message PingRequest {
+  string client_id = 1;
+  int64 sent_unix_ms = 2;
+  string payload = 3;
+}
+
+message PingReply {
+  string server_id = 1;
+  int64 received_unix_ms = 2;
+  int64 echoed_client_unix_ms = 3;
+  string message = 4;
+}
+
+message TickRequest {
+  string client_id = 1;
+  int32 interval_ms = 2;
+}
+
+message TickReply {
+  uint64 sequence = 1;
+  int64 server_unix_ms = 2;
+  string server_time_iso = 3;
+}
+
+message ChatMessage {
+  string from_id = 1;
+  uint64 sequence = 2;
+  int64 sent_unix_ms = 3;
+  string text = 4;
+  uint64 ack_sequence = 5;
+  string kind = 6;
+}
