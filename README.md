@@ -59,6 +59,12 @@ python python-client/client.py --target localhost:50051
 - `[recv] kind=HEARTBEAT ...` sorok: a szerver onalloan is kuld adatot, tehat mindket oldal aktiv kuldo.
 - `[ping]` sorok: minden 5. ACK utan unary hivas is megy, hogy latszodjon a tobbi RPC tipus is.
 
+## Screen recording
+
+![gRPC communication demo](./communication.gif)
+
+Eredeti video: [communication.mov](./communication.mov)
+
 ## Miert jo ez a minta?
 
 - A szerzodes-elsobb fejlesztes miatt a ket alkalmazas lazan csatolt.
