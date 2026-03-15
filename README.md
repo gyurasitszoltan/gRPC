@@ -61,7 +61,7 @@ python python-client/client.py --target localhost:50051
 
 ## Screen recording
 
-![gRPC communication demo](./communication.gif)
+![gRPC communication demo](./communication-animated.gif)
 
 Eredeti video: [communication.mov](./communication.mov)
 
